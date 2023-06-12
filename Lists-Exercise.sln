@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33723.286
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P1.Train", "P1.Train\P1.Train.csproj", "{48BC2EAB-D7C5-4421-887F-5258462D5A9B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P1.Train", "P1.Train\P1.Train.csproj", "{48BC2EAB-D7C5-4421-887F-5258462D5A9B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P2.ChangeList", "P2.ChangeList\P2.ChangeList.csproj", "{6CD123A3-608D-42DA-8F90-9BBDCEC3EC20}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P2.ChangeList", "P2.ChangeList\P2.ChangeList.csproj", "{6CD123A3-608D-42DA-8F90-9BBDCEC3EC20}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P3.HouseParty", "P3.HouseParty\P3.HouseParty.csproj", "{825FA46D-EF86-4C89-B034-7B580E0A468C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P3.HouseParty", "P3.HouseParty\P3.HouseParty.csproj", "{825FA46D-EF86-4C89-B034-7B580E0A468C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P4.ListOperations", "P4.ListOperations\P4.ListOperations.csproj", "{DE718136-CBBE-47FD-B553-71B1C527D702}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{825FA46D-EF86-4C89-B034-7B580E0A468C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{825FA46D-EF86-4C89-B034-7B580E0A468C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{825FA46D-EF86-4C89-B034-7B580E0A468C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE718136-CBBE-47FD-B553-71B1C527D702}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE718136-CBBE-47FD-B553-71B1C527D702}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE718136-CBBE-47FD-B553-71B1C527D702}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE718136-CBBE-47FD-B553-71B1C527D702}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
