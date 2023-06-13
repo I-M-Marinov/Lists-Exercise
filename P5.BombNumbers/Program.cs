@@ -9,42 +9,52 @@ namespace P5.BombNumbers
         static void Main(string[] args)
         {
             List<int> listOfNumbers = Console.ReadLine().Split().Select(int.Parse).ToList();
-            List<string> bombNumberAndPower = Console.ReadLine().Split().ToList();
+            List<int> bombNumberAndPower = Console.ReadLine().Split().Select(int.Parse).ToList();
 
-            int bombNumber = int.Parse(bombNumberAndPower[0]);
-            int bombNumPower = int.Parse(bombNumberAndPower[1]);
+            int bombNumber = bombNumberAndPower[0];
+            int bombNumPower = bombNumberAndPower[1];
 
-            for (int i = 0; i < listOfNumbers.Count; i++)
+            while (listOfNumbers.Contains(bombNumber))
             {
-                if (listOfNumbers[i] == bombNumber)
+                int bombPosition = listOfNumbers.IndexOf(bombNumber);
+
+                if (listOfNumbers.Count > bombPosition + bombNumPower)
+
                 {
-                    for (int j = bombNumber; j > bombNumber - bombNumPower; j--)
+                    for (int i = bombPosition + 1; i <= bombPosition + bombNumPower; i++)
                     {
-                        listOfNumbers.Remove(listOfNumbers[j]);
+                        listOfNumbers.RemoveAt(bombPosition + 1);
+                    }
+                }
+
+                else
+
+                {
+                    for (int i = bombPosition + 1; i < listOfNumbers.Count; i++)
+                    {
+                        listOfNumbers.RemoveAt(bombPosition + 1);
+                    }
+                }
+
+                if (bombPosition - bombNumPower >= 0)
+
+                {
+                    for (int i = bombPosition; i >= bombPosition - bombNumPower; i--)
+                    {
+                        listOfNumbers.RemoveAt(i);
+                    }
+                }
+
+                else
+
+                {
+                    for (int i = bombPosition; i >= 0; i--)
+                    {
+                        listOfNumbers.RemoveAt(i);
                     }
                 }
             }
-
-            for (int i = 0; i < listOfNumbers.Count; i++)
-            {
-                if (listOfNumbers[i] == bombNumber) 
-                {
-                    for (int j = bombNumber; j < bombNumber + bombNumPower; j++)
-                    {
-                        listOfNumbers.Remove(listOfNumbers[j]);
-                    }
-                }
-            }
-            
-
-            for (int i = 0; i < listOfNumbers.Count; i++)
-            {
-                if (listOfNumbers[i] == bombNumber)
-                {
-                    listOfNumbers.Remove(bombNumber);
-                }
-            }
-            Console.WriteLine(listOfNumbers.Sum());    
+            Console.WriteLine(listOfNumbers.Sum());
         }
     }
 }
